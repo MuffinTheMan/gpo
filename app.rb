@@ -18,7 +18,7 @@ require 'io/console'
 
 # ---------------------    --------------------- #
 SETTINGS = YAML.load_file('settings.yml')
-$recipient = SETTINGS["recipient"] === "default" ? "" : "--recipient #{SETTINGS['recipient']}"
+$recipient = SETTINGS["recipient"] === "default" ? "--default-recipient-self" : "--recipient #{SETTINGS['recipient']}"
 $e_file = SETTINGS["encrypted_file"]
 $d_file = SETTINGS["decrypted_file"]
 
